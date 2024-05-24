@@ -22,7 +22,6 @@ module tt_um_example (
   assign uio_oe  = 0;
 
 
-  wire clk;
   wire rst;
   wire [1:0] gen_left_op;
   wire [1:0] gen_right_op;
