@@ -23,20 +23,20 @@ module tt_um_example (
 
   systemizer #(.N(2), .L(8), .K(10), .M(2), .BLOCK(4)) DUT(
     .clk(clk),
-    .gen_left_op(gen_left_op),
-    .gen_right_op(gen_right_op),
+    .gen_left_op(),
+    .gen_right_op(),
     .rst(1'b0),
-    .start(start),
-    .done(done),
-    .fail(fail),
-    .success(success),
-    .start_right(start_right),
-    .rd_en(rd_en),
-    .rd_addr(rd_addr),
-    .data_out(data_out),
-    .wr_en(wr_en),
-    .wr_addr(wr_addr),
-    .data_in(data_in)
+    .start(),
+    .done(),
+    .fail(),
+    .success(),
+    .start_right(),
+    .rd_en(),
+    .rd_addr(),
+    .data_out(),
+    .wr_en(),
+    .wr_addr(),
+    .data_in()
   );
 
 endmodule
