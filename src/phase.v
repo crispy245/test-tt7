@@ -22,7 +22,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
  *
 */
-`include "inc/clog2.v"
+`include "clog2.v"
 module phase
 #(
   parameter N = 4,
