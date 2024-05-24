@@ -23,7 +23,7 @@
  *
 */
 
-`include "inc/clog2.v"
+`include "clog2.v"
 
 module systemizer
 #(
