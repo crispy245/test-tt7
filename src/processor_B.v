@@ -37,8 +37,7 @@
     input  wire [WIDTH-1:0] fac_in,
     output wire [WIDTH-1:0] fac_out,
     output wire             start_out,
-    output wire [WIDTH-1:0] data_out,
-    output wire             r
+    output wire [WIDTH-1:0] data_out
   );
 
     reg  [WIDTH-1:0] r_reg = 0;
@@ -81,7 +80,6 @@
 
     assign op_out = op_in;
 
-    assign r = r_reg;
 
     assign start_out = start_in;
 

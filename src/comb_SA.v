@@ -15,11 +15,6 @@ module comb_SA (
 
 parameter BLOCK = -1;
 
-generate
-if (BLOCK != 4) begin
-    ERROR_module_parameter_BLOCK_not_set_correctly ASSERT_ERROR();
-end
-endgenerate
 
  reg first_pass_del = 1'b0;
   reg start_del = 1'b0;
