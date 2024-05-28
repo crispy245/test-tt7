@@ -164,7 +164,7 @@ mem #(.WIDTH((2+`CLOG2(M))*N), .DEPTH(L+2*N + 1)) mem_op (
 
 assign data_out = dout_data;
 
-comb_SA #(.BLOCK(BLOCK)) comb_SA_inst (
+comb_SA comb_SA_inst (
   .functionA (functionA),
   .first_pass(first_pass),
   .pass(pass),
