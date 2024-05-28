@@ -1,3 +1,6 @@
+// verilator lint_off UNUSEDSIGNAL
+
+
 module delay
 #(
   parameter WIDTH = 1,
@@ -38,3 +41,4 @@ assign dout = level[DELAY];
 
 endmodule
 
+// verilator lint_off UNUSEDSIGNAL

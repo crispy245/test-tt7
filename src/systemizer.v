@@ -23,6 +23,7 @@
  *
 */
 // verilator lint_off UNUSEDSIGNAL
+// verilator lint_off WIDTHEXPAND
 
 `include "clog2.v"
 
@@ -115,5 +116,5 @@ phase #(.N(N), .M(M), .L(L), .K(K), .BLOCK(BLOCK), .DATA(DATA)) phase_inst (
   
 endmodule
 
-
+// verilator lint_off WIDTHEXPAND
 // verilator lint_off UNUSEDSIGNAL

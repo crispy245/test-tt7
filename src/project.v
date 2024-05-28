@@ -45,7 +45,7 @@ module tt_um_example (
     .start(ui_in[2]),
     .done(uio_out[1]),
     .fail(uio_out[0]),
-    .success(uio_out[2]),
+    .success(),
     .start_right(ui_in[3]),
     .rd_en(rd_en),
     .rd_addr(rd_addr),

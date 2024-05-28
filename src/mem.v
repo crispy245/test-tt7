@@ -6,6 +6,7 @@
  *
  */
 
+// verilator lint_off UNUSEDSIGNAL
 
 `include "clog2.v"
 
@@ -59,3 +60,4 @@ module mem
 
 endmodule
 
+// verilator lint_off UNUSEDSIGNAL
