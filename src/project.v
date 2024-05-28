@@ -46,7 +46,7 @@ module tt_um_example (
     .gen_left_op(gen_left_op),
     .gen_right_op(gen_right_op),
     .rst(rst),
-    .start(start),
+    .start(uio_in[6]),
     .done(done),
     .fail(fail),
     /* verilator lint_off PINCONNECTEMPTY */
