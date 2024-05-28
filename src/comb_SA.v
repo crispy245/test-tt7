@@ -13,7 +13,6 @@ module comb_SA (
   output wire r_A_and
 );
 
-parameter BLOCK = -1;
 
 
  reg first_pass_del = 1'b0;

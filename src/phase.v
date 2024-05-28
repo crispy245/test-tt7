@@ -23,6 +23,8 @@
  *
 */
 `include "clog2.v"
+// verilator lint_off UNUSEDSIGNAL
+
 module phase
 #(
   parameter N = 4,
@@ -113,3 +115,4 @@ step #(.N(N), .M(M), .L(L), .K(K), .BLOCK(BLOCK), .DATA(DATA)) step_inst (
 endmodule
 
 
+// verilator lint_off UNUSEDSIGNAL

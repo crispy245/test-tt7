@@ -2,6 +2,7 @@
  * Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
+// verilator lint_off UNUSEDSIGNAL
 
 `default_nettype none
 `include "clog2.v"
@@ -55,3 +56,4 @@ module tt_um_example (
   );
 
 endmodule
+  // verilator lint_off UNUSEDSIGNAL
