@@ -1,7 +1,7 @@
 module comb_SA (
   input wire functionA,
   input wire first_pass,
-  input wire [1:0] pass,//checking for gds
+  input wire [3:0] pass,//roll it back
   input wire clk,
   input wire rst,
   input start,

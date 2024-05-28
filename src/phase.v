@@ -26,7 +26,7 @@
 module phase
 #(
   parameter N = 4,
-  parameter M = 1,
+  parameter M = 3,
   parameter L = 8,
   parameter K = 16,
   parameter BLOCK = 4,

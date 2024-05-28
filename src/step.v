@@ -27,7 +27,7 @@
 module step
 #(
   parameter N = 4,              // size of the architecture
-  parameter M = 1,              // size of the field
+  parameter M = 3,              // size of the field 
   parameter L = 8,              // row number of the matrix
   parameter K = 16,             // column number of the matrix
   parameter DATA = "data.in",   // memory initialization file (matrix)
