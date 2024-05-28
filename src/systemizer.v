@@ -22,6 +22,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
  *
 */
+// verilator lint_off UNUSEDSIGNAL
 
 `include "clog2.v"
 
@@ -115,3 +116,4 @@ phase #(.N(N), .M(M), .L(L), .K(K), .BLOCK(BLOCK), .DATA(DATA)) phase_inst (
 endmodule
 
 
+// verilator lint_off UNUSEDSIGNAL

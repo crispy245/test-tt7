@@ -7,8 +7,9 @@ module GFE_inv (
   output wire [1:0] dout_B,
   output wire dout_en_B
 );
-
+// verilator lint_off UNUSEDPARAM
 parameter DELAY = -1;
+// verilator lint_off UNUSEDPARAM
 
 
 

@@ -1,3 +1,5 @@
+// verilator lint_off UNUSEDSIGNAL
+
 module comb_SA (
   input wire functionA,
   input wire first_pass,
@@ -812,4 +814,6 @@ module comb_SA (
   assign r_A_and = r_0_0 && r_1_1 && r_2_2 && r_3_3;
 
 endmodule
+
+// verilator lint_off UNUSEDSIGNAL
 
