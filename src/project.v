@@ -5,6 +5,7 @@
 
 `default_nettype none
 `include "clog2.v"
+`include "systemizer.v"
 module tt_um_example (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -31,14 +32,14 @@ module tt_um_example (
   wire start_right;
   wire done;
   wire rd_en;
-  wire [`CLOG2(8*10/2) - 1 : 0] rd_addr;
-  wire [2*(`CLOG2(3)) - 1: 0] data_out;
+  wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr;
+  wire [4*(`CLOG2(3)) - 1: 0] data_out;
   wire wr_en;
-  wire [`CLOG2(8*10/2) - 1 : 0] wr_addr;
-  wire [(2*`CLOG2(3))-1 : 0] data_in;
+  wire [`CLOG2((8*16)/4) - 1 : 0] wr_addr;
+  wire [(4*`CLOG2(3))-1 : 0] data_in;
 
 
-  systemizer #(.N(4), .L(8), .K(10), .M(3), .BLOCK(4)) DUT(
+  systemizer #(.N(4), .L(8), .K(16), .M(3), .BLOCK(4)) DUT(
     .clk(clk),
     .gen_left_op(gen_left_op),
     .gen_right_op(gen_right_op),
