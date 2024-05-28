@@ -27,6 +27,10 @@ module tt_um_example (
   wire rst=rst_n && ena;
   wire [1:0] gen_left_op;
   wire [1:0] gen_right_op;
+  wire fail;
+  wire done;
+  wire start;
+  wire success;
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
   // verilator lint_off UNUSEDSIGNAL
@@ -42,11 +46,11 @@ module tt_um_example (
     .gen_left_op(gen_left_op),
     .gen_right_op(gen_right_op),
     .rst(rst),
-    .start(ui_in[2]),
-    .done(uio_out[1]),
-    .fail(uio_out[0]),
+    .start(start),
+    .done(done),
+    .fail(fail),
     /* verilator lint_off PINCONNECTEMPTY */
-    .success(),
+    .success(success),
     /* verilator lint_off PINCONNECTEMPTY */
     .start_right(ui_in[3]),
     .rd_en(rd_en),
