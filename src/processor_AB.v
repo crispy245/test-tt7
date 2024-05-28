@@ -113,7 +113,7 @@
                     ((!inv_en)    ? 2'b00 :                    // data_in == 0
                     (r_reg[0]     ? 2'b10 : 2'b11)))));
 
-    assign r = r_reg | pass;
+    assign r = pass;
 
     assign start_out  = start_in;
 

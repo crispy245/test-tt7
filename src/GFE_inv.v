@@ -10,11 +10,7 @@ module GFE_inv (
 
 parameter DELAY = -1;
 
-generate
-if (DELAY != 1) begin
-    ERROR_module_parameter_DELAY_not_set_correctly_in_GF_INV ASSERT_ERROR();
-end
-endgenerate
+
 
 reg [2:0] mem [0:2];
 

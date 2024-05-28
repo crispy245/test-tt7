@@ -95,8 +95,8 @@ reg SA_start  = 1'b0;
 reg SA_finish = 1'b0;
 
 wire [(N*`CLOG2(M))-1 : 0] SA_dout;
-reg  [(N*(2+`CLOG2(M)))-1 : 0] SA_op_in = 0;
-wire [(N*(2+`CLOG2(M)))-1 : 0] SA_op_out;
+reg  [15 : 0] SA_op_in = 0;
+wire [15 : 0] SA_op_out;
 wire SA_r_A_and;
 
 reg  [(N*`CLOG2(M))-1 : 0] SA_din = 0;
