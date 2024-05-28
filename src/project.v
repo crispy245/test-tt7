@@ -38,7 +38,7 @@ module tt_um_example (
   wire [(2*`CLOG2(3))-1 : 0] data_in;
 
 
-  systemizer #(.N(2), .L(8), .K(10), .M(2), .BLOCK(4)) DUT(
+  systemizer #(.N(4), .L(8), .K(10), .M(3), .BLOCK(4)) DUT(
     .clk(clk),
     .gen_left_op(gen_left_op),
     .gen_right_op(gen_right_op),
