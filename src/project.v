@@ -20,19 +20,15 @@ module tt_um_example (
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
+  
 
 
-  wire rst=0;
-  wire [1:0] gen_left_op =0;
-  wire [1:0] gen_right_op=0;
-  wire start=1;
-  wire fail;
-  wire success;
-  wire start_right =0;
-  wire done;
+  wire rst=rst_n && ena;
+  wire [1:0] gen_left_op;
+  wire [1:0] gen_right_op;
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
-  wire [4*(`CLOG2(3)) - 1: 0] data_out=0;
+  wire [4*(`CLOG2(3)) - 1: 0] data_out;
   wire wr_en=ui_in[1];
   wire [`CLOG2((8*16)/4) - 1 : 0] wr_addr=0;
   wire [(4*`CLOG2(3))-1 : 0] data_in=0;
@@ -40,14 +36,14 @@ module tt_um_example (
 
   systemizer #(.N(4), .L(8), .K(16), .M(3), .BLOCK(4)) DUT(
     .clk(clk),
-    .gen_left_op(gen_left_op),
-    .gen_right_op(gen_right_op),
-    .rst(1'b0),
-    .start(start),
-    .done(done),
-    .fail(fail),
-    .success(success),
-    .start_right(start_right),
+    .gen_left_op(uo_out[5]),
+    .gen_right_op(uo_out[4]),
+    .rst(rst),
+    .start(ui_in[2]),
+    .done(uo_out[1]),
+    .fail(uo_out[0]),
+    .success(uo_out[2]),
+    .start_right(ui_in[3]),
     .rd_en(rd_en),
     .rd_addr(rd_addr),
     .data_out(data_out),
