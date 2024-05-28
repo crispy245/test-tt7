@@ -28,7 +28,9 @@ module tt_um_example (
   wire [1:0] gen_right_op;
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
+  // verilator lint_off UNUSEDSIGNAL
   wire [4*(`CLOG2(3)) - 1: 0] data_out;
+  // verilator lint_off UNUSEDSIGNAL
   wire wr_en=ui_in[1];
   wire [`CLOG2((8*16)/4) - 1 : 0] wr_addr=0;
   wire [(4*`CLOG2(3))-1 : 0] data_in=0;
@@ -36,8 +38,8 @@ module tt_um_example (
 
   systemizer #(.N(4), .L(8), .K(16), .M(3), .BLOCK(4)) DUT(
     .clk(clk),
-    .gen_left_op(uo_out[5]),
-    .gen_right_op(uo_out[4]),
+    .gen_left_op(gen_left_op),
+    .gen_right_op(gen_right_op),
     .rst(rst),
     .start(ui_in[2]),
     .done(uo_out[1]),
