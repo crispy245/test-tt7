@@ -225,7 +225,7 @@ module comb_SA (
 
   //verilator lint_off UNUSEDSIGNAL 
   wire start_out_0_3;
-  //verilator lint_off UNUSEDSIGNA
+  //verilator lint_off UNUSEDSIGNAL
 
   wire [1:0] op_out_0_3;
 
