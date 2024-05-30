@@ -30,17 +30,17 @@ module tt_um_example (
   //verilator lint_off UNUSEDSIGNAL
   wire [1:0] gen_right_op;
   //verilator lint_off UNUSEDSIGNAL
-  
+
   wire fail;
-  assign uio_out[0] = fail;
+  assign fail = uio_out[0];
 
   wire done;
-  assign uio_out[1] = done;
+  assign  done = uio_out[1];
 
   wire start;
-  assign uio_in[0] = start;
+  assign  start = uio_in[0];
   wire success;
-  assign uio_out[2] = success;
+  assign success = uio_out[2];
 
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
