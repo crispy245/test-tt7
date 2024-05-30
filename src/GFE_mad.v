@@ -1,4 +1,3 @@
-// verilator lint_off UNUSEDSIGNAL
 
   module GFE_mad (
   input          clk,
@@ -10,4 +9,3 @@
   assign dout = dinA * dinB + dinC; 
   
 endmodule 
-// verilator lint_off UNUSEDSIGNAL

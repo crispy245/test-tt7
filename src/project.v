@@ -2,7 +2,6 @@
  * Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
-// verilator lint_off UNUSEDSIGNAL
 
 `default_nettype none
 `include "clog2.v"
@@ -33,9 +32,7 @@ module tt_um_example (
   wire success;
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
-  // verilator lint_off UNUSEDSIGNAL
   wire [4*(`CLOG2(3)) - 1: 0] data_out;
-  // verilator lint_off UNUSEDSIGNAL
   wire wr_en=ui_in[1];
   wire [`CLOG2((8*16)/4) - 1 : 0] wr_addr=0;
   wire [(4*`CLOG2(3))-1 : 0] data_in=0;
@@ -49,9 +46,7 @@ module tt_um_example (
     .start(uio_in[6]),
     .done(done),
     .fail(fail),
-    /* verilator lint_off PINCONNECTEMPTY */
     .success(success),
-    /* verilator lint_off PINCONNECTEMPTY */
     .start_right(ui_in[3]),
     .rd_en(rd_en),
     .rd_addr(rd_addr),
@@ -62,4 +57,3 @@ module tt_um_example (
   );
 
 endmodule
-  // verilator lint_off UNUSEDSIGNAL

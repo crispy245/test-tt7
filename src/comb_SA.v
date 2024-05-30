@@ -1,4 +1,3 @@
-// verilator lint_off UNUSEDSIGNAL
 
 module comb_SA (
   input wire functionA,
@@ -815,5 +814,4 @@ module comb_SA (
 
 endmodule
 
-// verilator lint_off UNUSEDSIGNAL
 

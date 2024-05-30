@@ -23,7 +23,6 @@
  *
 */
 `include "clog2.v"
-// verilator lint_off UNUSEDSIGNAL
 
 module step
 #(
@@ -263,4 +262,3 @@ assign fail = fail_reg;
 wire tester = (row_counter > (start_row+DELAY)) && (row_counter <= wr_en_op_end);
 endmodule
 
-// verilator lint_off UNUSEDSIGNAL

@@ -23,7 +23,6 @@
  *
 */
 `include "clog2.v"
-// verilator lint_off UNUSEDSIGNAL
 // verilator lint_off WIDTHEXPAND
 
 module phase
@@ -117,4 +116,3 @@ endmodule
 
 
 // verilator lint_off UNUSEDSIGNAL
-// verilator lint_off WIDTHEXPAND

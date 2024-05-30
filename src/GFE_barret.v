@@ -1,4 +1,3 @@
-// verilator lint_off UNUSEDSIGNAL
 
 module GFE_barret(
     input wire [2:0] din_a,
@@ -17,4 +16,3 @@ module GFE_barret(
 
 endmodule
 
-// verilator lint_off UNUSEDSIGNAL
