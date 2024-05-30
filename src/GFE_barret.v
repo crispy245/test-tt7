@@ -12,6 +12,7 @@ module GFE_barret(
     wire [2:0] result = din_a - mult;
 
     wire[2:0] pre_sub = result - 3;
+    assign pre_sub[2] = 0;
     assign dout_r = result >= 3 ? pre_sub[1:0] : result[1:0];
 
 endmodule

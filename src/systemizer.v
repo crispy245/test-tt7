@@ -43,7 +43,9 @@ module systemizer
   input  wire start,
   output wire fail,
   output wire success,
+  //verilator lint_off UNUSEDSIGNAL 
   input  wire start_right,
+  //verilator lint_off UNUSEDSIGNAL 
   output wire done,
   input  wire rd_en,
   input  wire [`CLOG2(L*K/N) - 1 : 0] rd_addr,

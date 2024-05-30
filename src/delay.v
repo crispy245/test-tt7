@@ -6,14 +6,16 @@ module delay
   parameter DELAY = 1
 )
 (
+  //verilator lint_off UNUSEDSIGNAL
   input  wire clk,
+  //verilator lint_off UNUSEDSIGNAL
   input  wire [WIDTH-1:0] din,
   output wire [WIDTH-1:0] dout
 );
 
-
+//verilator lint_off UNUSEDSIGNAL
 reg [WIDTH-1:0] level_buf [1:DELAY+1];
-
+//verilator lint_off UNUSEDSIGNAL
 wire [WIDTH-1:0] level [0:DELAY];
 
 assign level[0] = din;

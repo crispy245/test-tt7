@@ -17,22 +17,36 @@ module tt_um_example (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
   assign uio_oe  = 0;
   
 
 
   wire rst=rst_n && ena;
+
+  //verilator lint_off UNUSEDSIGNAL 
   wire [1:0] gen_left_op;
+  //verilator lint_off UNUSEDSIGNAL 
+
+  //verilator lint_off UNUSEDSIGNAL
   wire [1:0] gen_right_op;
+  //verilator lint_off UNUSEDSIGNAL
+  
   wire fail;
+  assign uio_out[0] = fail;
+
   wire done;
+  assign uio_out[1] = done;
+
   wire start;
+  assign uio_in[0] = start;
   wire success;
+  assign uio_out[2] = success;
+
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
   wire [4*(`CLOG2(3)) - 1: 0] data_out;
+  assign uo_out = data_out;
+
   wire wr_en=ui_in[1];
   wire [`CLOG2((8*16)/4) - 1 : 0] wr_addr=0;
   wire [(4*`CLOG2(3))-1 : 0] data_in=0;

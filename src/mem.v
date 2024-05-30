@@ -28,8 +28,10 @@ module mem
 
   reg [WIDTH-1:0] mem [0:DEPTH-1] /* synthesis ramstyle = "M20K" */;
 
+  //verilator lint_off UNUSEDSIGNAL
   integer file;
   integer scan;
+  //verilator lint_off UNUSEDSIGNAL
   integer i;
 
   initial

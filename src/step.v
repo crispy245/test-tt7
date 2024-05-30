@@ -253,12 +253,10 @@ always @(posedge clk) begin
 
   SA_finish     <= functionA && (row_counter == SA_finish_end);
 end
-wire test = row_counter == start_row;
 
 assign done = done_reg;
 assign fail = fail_reg;
 
 
-wire tester = (row_counter > (start_row+DELAY)) && (row_counter <= wr_en_op_end);
 endmodule
 

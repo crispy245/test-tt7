@@ -38,13 +38,13 @@ module comb_SA (
   reg [3 : 1] start_row = 0;
 
   reg [3 : 1] finish_tmp = 0;
-  reg [3 : 1] finish_tmp_d = 0;
   reg [3 : 1] finish_in = 0;
-  wire [3 : 0] finish_out;
+  wire [2 : 0] finish_out;
 
   reg [3 : 0] first_pass_tmp = 0;
 
   reg [3 : 0] first_pass_row = 0;
+  assign first_pass_row[0] = 0;
 
 
   always @(posedge clk) begin
@@ -223,8 +223,10 @@ module comb_SA (
 
   wire [1:0] fac_in_0_3;
 
-
+  //verilator lint_off UNUSEDSIGNAL 
   wire start_out_0_3;
+  //verilator lint_off UNUSEDSIGNA
+
   wire [1:0] op_out_0_3;
 
 
@@ -404,8 +406,9 @@ module comb_SA (
 
   wire [1:0] fac_in_1_3;
 
-
+  //verilator lint_off UNUSEDSIGNAL
   wire start_out_1_3;
+  //verilator lint_off UNUSEDSIGNAL
   wire [1:0] op_out_1_3;
 
 
@@ -576,8 +579,9 @@ module comb_SA (
 
   wire [1:0] fac_in_2_3;
 
-
+  //verilator lint_off UNUSEDSIGNAL
   wire start_out_2_3;
+  //verilator lint_off UNUSEDSIGNAL
   wire [1:0] op_out_2_3;
 
 
@@ -734,8 +738,9 @@ module comb_SA (
 
   wire [1:0] fac_in_3_3;
 
-
+  //verilator lint_off UNUSEDSIGNAL
   wire start_out_3_3;
+  //verilator lint_off UNUSEDSIGNAL
   wire [1:0] op_out_3_3;
 
 
