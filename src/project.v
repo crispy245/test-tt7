@@ -17,8 +17,13 @@ module tt_um_example (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
+
+  /* verilator lint_off WIDTHEXPAND */
+  /* verilator lint_off WIDTHTRUNC */
   assign uio_oe  = 0;
   assign uio_out[7:3] = ui_in[7:4] + ui_in[2] + uio_in[7] + uio_in[5:0];
+  /* verilator lint_off WIDTHTRUNC */
+  /* verilator lint_off WIDTHEXPAND */
 
   
 

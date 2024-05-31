@@ -71,6 +71,7 @@ module comb_SA (
     finish_in[2]  <= finish_tmp[2];
     finish_tmp[3] <= finish_out[2];
     finish_in[3]  <= finish_tmp[3];
+    finish_out[3] <= 0;
   end
 
   wire first_pass_row_0;
