@@ -39,7 +39,10 @@ module comb_SA (
 
   reg [3 : 1] finish_tmp = 0;
   reg [3 : 1] finish_in = 0;
+
+  //verilator lint_off UNUSEDSIGNAL
   wire [3 : 0] finish_out;
+  //verilator lint_off UNUSEDSIGNAL
 
   //reg [3 : 0] first_pass_tmp = 0;
 
@@ -71,7 +74,6 @@ module comb_SA (
     finish_in[2]  <= finish_tmp[2];
     finish_tmp[3] <= finish_out[2];
     finish_in[3]  <= finish_tmp[3];
-    finish_out[3] <= 0;
   end
 
   wire first_pass_row_0;
