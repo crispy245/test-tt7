@@ -39,12 +39,13 @@ module comb_SA (
 
   reg [3 : 1] finish_tmp = 0;
   reg [3 : 1] finish_in = 0;
-  wire [2 : 0] finish_out;
+  wire [3 : 0] finish_out;
 
-  reg [3 : 0] first_pass_tmp = 0;
+  //reg [3 : 0] first_pass_tmp = 0;
 
+  //verilator lint_off UNUSEDSIGNAL
   reg [3 : 0] first_pass_row = 0;
-  assign first_pass_row[0] = 0;
+  //verilator lint_off UNUSEDSIGNAL
 
 
   always @(posedge clk) begin

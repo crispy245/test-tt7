@@ -18,6 +18,7 @@ module tt_um_example (
 
   // All output pins must be assigned. If not used, assign to 0.
   assign uio_oe  = 0;
+
   
 
 
@@ -31,16 +32,8 @@ module tt_um_example (
   wire [1:0] gen_right_op;
   //verilator lint_off UNUSEDSIGNAL
 
-  wire fail;
-  assign fail = uio_out[0];
 
-  wire done;
-  assign  done = uio_out[1];
 
-  wire start;
-  assign  start = uio_in[0];
-  wire success;
-  assign success = uio_out[2];
 
   wire rd_en=ui_in[0];
   wire [`CLOG2((8*16)/4) - 1 : 0] rd_addr=0;
@@ -58,9 +51,9 @@ module tt_um_example (
     .gen_right_op(gen_right_op),
     .rst(rst),
     .start(uio_in[6]),
-    .done(done),
-    .fail(fail),
-    .success(success),
+    .done(uio_out[1]),
+    .fail(uio_out[0]),
+    .success(uio_out[2]),
     .start_right(ui_in[3]),
     .rd_en(rd_en),
     .rd_addr(rd_addr),
